@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>somewhere after midnight</title>
+  <style>
+    :root {
+      --ink: #171513;
+      --paper: #d6c4aa;
+      --brown: #8a6248;
+      --blue: #3d4e5f;
+      --green: #4e5a46;
+      --burgundy: #6d3f45;
+      --fog: #c9c7bd;
+    }* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: var(--paper);
+  background-image:
+    url("images/paper-grain.jpg");
+  background-size: 700px;
+  background-repeat: repeat;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 18px;
+  background:
+    radial-gradient(circle at top left, rgba(61,78,95,0.18), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(109,63,69,0.18), transparent 32%),
+    linear-gradient(rgba(214,196,170,0.82), rgba(214,196,170,0.82)),
+    url("images/paper-grain.jpg"),
+    var(--paper);
+  background-size:
+    auto,
+    auto,
+    auto,
+    1400px,
+    auto;
+}
+
+.card {
+  width: 100%;
+  max-width: 760px;
+  border: 1px solid rgba(23,21,19,0.35);
+  background: rgba(214,196,170,0.72);
+  padding: 42px 28px;
+  box-shadow: 0 18px 60px rgba(23,21,19,0.16);
+}
+
+.eyebrow {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 9vw, 6.4rem);
+  line-height: 0.9;
+  font-weight: 400;
+  margin: 0 0 28px;
+  letter-spacing: -0.06em;
+}
+
+.intro {
+  max-width: 620px;
+  font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+  margin-bottom: 28px;
+}
+
+.description {
+  max-width: 640px;
+  margin-bottom: 34px;
+  font-size: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+a.button {
+  display: inline-block;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  padding: 11px 16px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.12);
+}
+
+a.button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.submit {
+  border-top: 1px solid rgba(23,21,19,0.35);
+  padding-top: 24px;
+  font-size: 0.95rem;
+}
+
+.submit strong {
+  font-weight: 700;
+}
+
+.rights {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(23,21,19,0.12);
+  font-size: 0.78rem;
+  opacity: 0.58;
+  line-height: 1.5;
+}
+
+.small {
+  margin-top: 28px;
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="eyebrow">music / art / archive</div><h1>somewhere<br />after<br />midnight</h1>
+
+  <p class="intro">
+    A curated late-night archive of acoustic, folk, shoegaze, experimental and electronic music — songs with emotional weight, quiet intensity and a life after dark.
+  </p>
+
+  <p class="description">
+    Each month, a new playlist gathers tracks that feel intimate, weathered, strange or beautiful. Visual posts are built around empty frames, handmade textures and artwork submitted by listeners and artists.
+  </p>
+
+  <div class="links">
+  <a class="button"
+     href="https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq?si=fatMV1UbR8G2mc1WmxhvGA&pi=NFl-7i9NSRGnd"
+     target="_blank"
+     rel="noopener noreferrer">
+     Listen to Genesis [05_26]
+  </a>
+
+  <a class="button"
+     href="https://www.instagram.com/aftermidnight.archive"
+     target="_blank"
+     rel="noopener noreferrer">
+     Instagram
+  </a>
+
+  <a class="button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLScp1iqGb6Q67rZItI5lgPVKomq35A_J7nNQKUDaHJps1_-Ydw/viewform?usp=publish-editor"
+     target="_blank"
+     rel="noopener noreferrer">
+     Submit a Response
+  </a>
+</div>
+
+  <div class="submit">
+    <p><strong>The archive remains open.</strong></p>
+    <p>
+  Submit visual responses to music — photography, drawing, collage, texture, film stills, handwritten fragments or artwork created in conversation with a song. Responses may connect to existing archive tracks or introduce something new alongside the work.
+</p>
+
+<p>
+  AI-generated images may occasionally appear as placeholders or prompts, but featured submissions should be human-made, clearly credited and emotionally genuine.
+</p>
+  </div>
+
+  <div class="small">For the songs that find you when the room goes quiet.</div>  
+
+<p class="rights">
+  Artists retain full ownership of submitted work. Contributions remain credited to their creators and may be removed upon request.
+</p>
+
+<p class="rights">contact - somewhereaftermidnight.archive[at]gmail.com</p>
+
+</section>
+
+  </main>
+</body>
+</html>
