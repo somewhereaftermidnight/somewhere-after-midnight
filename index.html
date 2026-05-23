@@ -137,6 +137,49 @@ a.button:hover {
   opacity: 0.75;
 }
 
+@media (max-width: 600px) {
+  .page {
+    padding: 18px 10px;
+    align-items: flex-start;
+  }
+
+  .card {
+    padding: 34px 24px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: clamp(3.4rem, 18vw, 5rem);
+    letter-spacing: -0.075em;
+  }
+
+  .intro {
+    font-size: 1.55rem;
+    line-height: 1.45;
+  }
+
+  .description,
+  .submit {
+    font-size: 1.05rem;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  a.button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rights,
+  .contact {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -192,7 +235,7 @@ a.button:hover {
   Artists retain full ownership of submitted work. Contributions remain credited to their creators and may be removed upon request.
 </p>
 
-<p class="rights">contact - somewhereaftermidnight.archive[at]gmail.com</p>
+<p class="contact">contact - somewhereaftermidnight.archive[at]gmail.com</p>
 
 </section>
 
