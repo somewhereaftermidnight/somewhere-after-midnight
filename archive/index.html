@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>archive — somewhere after midnight</title>
+
+  <link rel="icon" type="image/png" href="../favicon.png">
+
+  <style>
+    :root {
+      --ink: #171513;
+      --paper: #d6c4aa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 18px;
+
+      background:
+        radial-gradient(circle at top left, rgba(61,78,95,0.18), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(109,63,69,0.18), transparent 32%),
+        linear-gradient(rgba(214,196,170,0.82), rgba(214,196,170,0.82)),
+        url("../images/paper-grain.jpg"),
+        var(--paper);
+
+      background-size:
+        auto,
+        auto,
+        auto,
+        1400px,
+        auto;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 760px;
+      border: 1px solid rgba(23,21,19,0.35);
+      background: rgba(214,196,170,0.72);
+      padding: 42px 28px;
+      box-shadow: 0 18px 60px rgba(23,21,19,0.16);
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 9vw, 6rem);
+      line-height: 0.9;
+      font-weight: 400;
+      margin: 0 0 28px;
+      letter-spacing: -0.06em;
+    }
+
+    .intro {
+      max-width: 620px;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .archive-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .archive-entry {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      padding: 18px 0;
+      border-top: 1px solid rgba(23,21,19,0.18);
+    }
+
+    .archive-entry:hover {
+      opacity: 0.75;
+    }
+
+    .archive-title {
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    .archive-meta {
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.65;
+    }
+
+    .back {
+      margin-top: 40px;
+      display: inline-block;
+      text-decoration: none;
+      color: var(--ink);
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 30px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="page">
+
+<section class="card">
+
+<div class="eyebrow">
+archive
+</div>
+
+<h1>
+the<br>
+archive
+</h1>
+
+<p class="intro">
+A record of monthly selections. Each chapter gathers music supported through Bandcamp alongside artwork, textures and visual responses submitted to the archive.
+</p>
+
+<div class="archive-list">
+
+<a class="archive-entry" href="genesis-05-26.html">
+  <div class="archive-title">Genesis [05_26]</div>
+  <div class="archive-meta">May 2026 · 12 selections</div>
+</a>
+
+<!-- Future archives -->
+
+<a class="archive-entry" href="#">
+  <div class="archive-title">Coming Soon</div>
+  <div class="archive-meta">June 2026</div>
+</a>
+
+</div>
+
+<a class="back" href="../index.html">
+← Return Home
+</a>
+
+</section>
+
+</main>
+
+</body>
+</html>
