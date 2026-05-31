@@ -137,6 +137,29 @@ a.button:hover {
   opacity: 0.75;
 }
 
+.nav {
+  margin: 0 0 32px;
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+}
+
+.nav a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  opacity: 0.65;
+}
+
+.nav span {
+  opacity: 0.4;
+  margin: 0 8px;
+}
+
 @media (max-width: 600px) {
   .page {
     padding: 18px 10px;
@@ -198,6 +221,18 @@ a.button:hover {
   <main class="page">
     <section class="card">
       <div class="eyebrow">music / art / archive</div><h1>somewhere<br />after<br />midnight</h1>
+
+<div class="nav">
+  <a href="archive/">archive</a>
+  <span>·</span>
+  <a href="https://www.instagram.com/aftermidnight.archive"
+     target="_blank"
+     rel="noopener noreferrer">instagram</a>
+  <span>·</span>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScp1iqGb6Q67rZItI5lgPVKomq35A_J7nNQKUDaHJps1_-Ydw/viewform?usp=publish-editor"
+     target="_blank"
+     rel="noopener noreferrer">submit a response</a>
+</div>
 
   <p class="intro">
     A curated late-night archive of acoustic, folk, shoegaze, experimental and electronic music — songs with emotional weight, quiet intensity and a life after dark.
