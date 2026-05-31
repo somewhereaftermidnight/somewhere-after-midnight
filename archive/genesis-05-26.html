@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Genesis [05_26] — somewhere after midnight</title>
+
+  <link rel="icon" type="image/png" href="../favicon.png">
+
+  <style>
+    :root {
+      --ink: #171513;
+      --paper: #d6c4aa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 18px;
+      background:
+        radial-gradient(circle at top left, rgba(61,78,95,0.18), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(109,63,69,0.18), transparent 32%),
+        linear-gradient(rgba(214,196,170,0.86), rgba(214,196,170,0.86)),
+        url("../images/paper-grain.jpg"),
+        var(--paper);
+      background-size:
+        auto,
+        auto,
+        auto,
+        1400px,
+        auto;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 760px;
+      border: 1px solid rgba(23,21,19,0.35);
+      background: rgba(214,196,170,0.74);
+      padding: 42px 28px;
+      box-shadow: 0 18px 60px rgba(23,21,19,0.16);
+    }
+
+    .eyebrow,
+    .meta,
+    .track-link,
+    .back {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.18em;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 9vw, 6rem);
+      line-height: 0.9;
+      font-weight: 400;
+      margin: 0 0 18px;
+      letter-spacing: -0.06em;
+    }
+
+    .meta {
+      opacity: 0.65;
+      margin-bottom: 34px;
+    }
+
+    .intro {
+      max-width: 620px;
+      margin-bottom: 42px;
+      font-size: 1.08rem;
+    }
+
+    .track {
+      border-top: 1px solid rgba(23,21,19,0.22);
+      padding: 28px 0;
+    }
+
+    .track h2 {
+      font-size: 1.45rem;
+      font-weight: 400;
+      margin: 0 0 4px;
+      line-height: 1.2;
+    }
+
+    .artist {
+      margin: 0 0 18px;
+      opacity: 0.78;
+    }
+
+    .embed {
+      margin: 18px 0;
+    }
+
+    .track-link {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(23,21,19,0.45);
+    }
+
+    .track-link:hover,
+    .back:hover {
+      opacity: 0.65;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 34px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 18px 10px;
+      }
+
+      .card {
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 16vw, 4.4rem);
+      }
+
+      .intro {
+        font-size: 1.02rem;
+      }
+
+      .track h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="page">
+  <section class="card">
+
+    <div class="eyebrow">archive / chapter one</div>
+
+    <h1>Genesis<br>[05_26]</h1>
+
+    <div class="meta">May 2026 · 12 selections</div>
+
+    <p class="intro">
+      The first monthly archive from somewhere after midnight. A collection of songs gathered for their quiet intensity, emotional weather and late-night atmosphere — each supported through Bandcamp where possible.
+    </p>
+
+    <article class="track">
+      <h2>Track Title</h2>
+      <p class="artist">Artist Name</p>
+
+      <div class="embed">
+        <!-- Paste Bandcamp embed code here -->
+      </div>
+
+      <a class="track-link"
+         href="BANDCAMP_LINK_HERE"
+         target="_blank"
+         rel="noopener noreferrer">
+         buy / listen on Bandcamp
+      </a>
+    </article>
+
+    <article class="track">
+      <h2>Track Title</h2>
+      <p class="artist">Artist Name</p>
+
+      <div class="embed">
+        <!-- Paste Bandcamp embed code here -->
+      </div>
+
+      <a class="track-link"
+         href="BANDCAMP_LINK_HERE"
+         target="_blank"
+         rel="noopener noreferrer">
+         buy / listen on Bandcamp
+      </a>
+    </article>
+
+    <article class="track">
+      <h2>Track Title</h2>
+      <p class="artist">Artist Name</p>
+
+      <div class="embed">
+        <!-- Paste Bandcamp embed code here -->
+      </div>
+
+      <a class="track-link"
+         href="BANDCAMP_LINK_HERE"
+         target="_blank"
+         rel="noopener noreferrer">
+         buy / listen on Bandcamp
+      </a>
+    </article>
+
+    <a class="back" href="index.html">← Return to archive</a>
+
+  </section>
+</main>
+
+</body>
+</html>
