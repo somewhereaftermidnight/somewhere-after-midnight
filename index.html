@@ -1,9 +1,12 @@
-<!DOCTYPE html><html lang="en">
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="favicon.png">
   <title>somewhere after midnight</title>
+
   <style>
     :root {
       --ink: #171513;
@@ -13,289 +16,310 @@
       --green: #4e5a46;
       --burgundy: #6d3f45;
       --fog: #c9c7bd;
-    }* {
-  box-sizing: border-box;
-}
+    }
 
-body {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background-color: var(--paper);
-  background-image:
-    url("images/paper-grain.jpg");
-  background-size: 700px;
-  background-repeat: repeat;
-  color: var(--ink);
-  line-height: 1.6;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.page {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 18px;
-  background:
-    radial-gradient(circle at top left, rgba(61,78,95,0.18), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(109,63,69,0.18), transparent 32%),
-    linear-gradient(rgba(214,196,170,0.82), rgba(214,196,170,0.82)),
-    url("images/paper-grain.jpg"),
-    var(--paper);
-  background-size:
-    auto,
-    auto,
-    auto,
-    1400px,
-    auto;
-}
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: var(--paper);
+      background-image: url("images/paper-grain.jpg");
+      background-size: 700px;
+      background-repeat: repeat;
+      color: var(--ink);
+      line-height: 1.6;
+    }
 
-.card {
-  width: 100%;
-  max-width: 760px;
-  border: 1px solid rgba(23,21,19,0.35);
-  background: rgba(214,196,170,0.72);
-  padding: 42px 28px;
-  box-shadow: 0 18px 60px rgba(23,21,19,0.16);
-}
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 18px;
+      background:
+        radial-gradient(circle at top left, rgba(61,78,95,0.18), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(109,63,69,0.18), transparent 32%),
+        linear-gradient(rgba(214,196,170,0.82), rgba(214,196,170,0.82)),
+        url("images/paper-grain.jpg"),
+        var(--paper);
+      background-size: auto, auto, auto, 1400px, auto;
+    }
 
-.eyebrow {
-  font-family: Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.75rem;
-  margin-bottom: 28px;
-}
+    .card {
+      width: 100%;
+      max-width: 760px;
+      border: 1px solid rgba(23,21,19,0.35);
+      background: rgba(214,196,170,0.72);
+      padding: 42px 28px;
+      box-shadow: 0 18px 60px rgba(23,21,19,0.16);
+    }
 
-h1 {
-  font-size: clamp(2.8rem, 9vw, 6.4rem);
-  line-height: 0.9;
-  font-weight: 400;
-  margin: 0 0 28px;
-  letter-spacing: -0.06em;
-}
+    .eyebrow,
+    .listen-eyebrow,
+    .nav,
+    .small {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
 
-.intro {
-  max-width: 620px;
-  font-size: clamp(1.1rem, 2.4vw, 1.35rem);
-  margin-bottom: 28px;
-}
+    .eyebrow {
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      margin-bottom: 28px;
+    }
 
-.description {
-  max-width: 640px;
-  margin-bottom: 34px;
-  font-size: 1rem;
-}
+    h1 {
+      font-size: clamp(2.8rem, 9vw, 6.4rem);
+      line-height: 0.9;
+      font-weight: 400;
+      margin: 0 0 28px;
+      letter-spacing: -0.06em;
+    }
 
-.listen-eyebrow {
-  font-family: Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.75rem;
-  margin-bottom: 16px;
-  opacity: 0.75;
-}
+    .nav {
+      margin: 0 0 32px;
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
 
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 30px;
-}
+    .nav a {
+      color: var(--ink);
+      text-decoration: none;
+    }
 
-a.button {
-  display: inline-block;
-  border: 1px solid var(--ink);
-  color: var(--ink);
-  text-decoration: none;
-  padding: 11px 16px;
-  font-family: Arial, sans-serif;
-  font-size: 0.9rem;
-  background: rgba(255,255,255,0.12);
-}
+    .nav a:hover {
+      opacity: 0.65;
+    }
 
-a.button:hover {
-  background: var(--ink);
-  color: var(--paper);
-}
+    .nav span {
+      opacity: 0.4;
+      margin: 0 8px;
+    }
 
-.submit {
-  border-top: 1px solid rgba(23,21,19,0.35);
-  padding-top: 24px;
-  font-size: 0.95rem;
-}
+    .intro {
+      max-width: 620px;
+      font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+      margin-bottom: 28px;
+    }
 
-.submit strong {
-  font-weight: 700;
-}
+    .description {
+      max-width: 640px;
+      margin-bottom: 34px;
+      font-size: 1rem;
+    }
 
-.rights {
-  margin-top: 22px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(23,21,19,0.12);
-  font-size: 0.78rem;
-  opacity: 0.58;
-  line-height: 1.5;
-}
+    .listen-eyebrow {
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      margin-bottom: 16px;
+      opacity: 0.75;
+    }
 
-.small {
-  margin-top: 28px;
-  font-family: Arial, sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.75;
-}
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
 
-.nav {
-  margin: 0 0 32px;
-  font-family: Arial, sans-serif;
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  line-height: 1.8;
-}
+    a.button {
+      display: inline-block;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      text-decoration: none;
+      padding: 11px 16px;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.12);
+    }
 
-.nav a {
-  color: var(--ink);
-  text-decoration: none;
-}
+    a.button:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
 
-.nav a:hover {
-  opacity: 0.65;
-}
+    .submit {
+      border-top: 1px solid rgba(23,21,19,0.35);
+      padding-top: 24px;
+      font-size: 0.95rem;
+    }
 
-.nav span {
-  opacity: 0.4;
-  margin: 0 8px;
-}
+    .submit strong {
+      font-weight: 700;
+    }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 18px 10px;
-    align-items: flex-start;
-  }
+    .future {
+      margin-top: 22px;
+      font-size: 0.92rem;
+      opacity: 0.82;
+    }
 
-  .card {
-    padding: 30px 22px;
-    max-width: 100%;
-    overflow: hidden;
-  }
+    .small {
+      margin-top: 28px;
+      font-size: 0.78rem;
+      opacity: 0.75;
+    }
 
-  .eyebrow {
-    font-size: 0.72rem;
-    letter-spacing: 0.16em;
-  }
+    .rights {
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(23,21,19,0.12);
+      font-size: 0.78rem;
+      opacity: 0.58;
+      line-height: 1.5;
+    }
 
-  .nav {
-  font-size: 0.75rem;
-  line-height: 2;
-}
+    .contact {
+      font-size: 0.85rem;
+      opacity: 0.72;
+    }
 
-  h1 {
-    font-size: clamp(3rem, 16vw, 4.4rem);
-    line-height: 0.9;
-    letter-spacing: -0.075em;
-  }
+    @media (max-width: 600px) {
+      .page {
+        padding: 18px 10px;
+        align-items: flex-start;
+      }
 
-  .intro {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
+      .card {
+        padding: 30px 22px;
+        max-width: 100%;
+        overflow: hidden;
+      }
 
-  .description,
-  .submit {
-    font-size: 0.98rem;
-  }
+      .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+      }
 
-  .links {
-    flex-direction: column;
-  }
+      .nav {
+        font-size: 0.75rem;
+        line-height: 2;
+      }
 
-  a.button {
-    width: 100%;
-    text-align: center;
-  }
+      h1 {
+        font-size: clamp(3rem, 16vw, 4.4rem);
+        line-height: 0.9;
+        letter-spacing: -0.075em;
+      }
 
-  .small {
-    font-size: 0.72rem;
-    line-height: 1.6;
-  }
+      .intro {
+        font-size: 1.25rem;
+        line-height: 1.5;
+      }
 
-  .rights,
-  .contact {
-    font-size: 0.82rem;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-}
+      .description,
+      .submit {
+        font-size: 0.98rem;
+      }
 
+      .links {
+        flex-direction: column;
+      }
+
+      a.button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .small {
+        font-size: 0.72rem;
+        line-height: 1.6;
+      }
+
+      .rights,
+      .contact {
+        font-size: 0.82rem;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+    }
   </style>
 </head>
+
 <body>
   <main class="page">
     <section class="card">
-      <div class="eyebrow">music / art / archive</div><h1>somewhere<br />after<br />midnight</h1>
 
-<div class="nav">
-  <a href="archive/">archive</a>
-  <span>·</span>
-  <a href="https://www.instagram.com/aftermidnight.archive"
-     target="_blank"
-     rel="noopener noreferrer">instagram</a>
-  <span>·</span>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScp1iqGb6Q67rZItI5lgPVKomq35A_J7nNQKUDaHJps1_-Ydw/viewform?usp=publish-editor"
-     target="_blank"
-     rel="noopener noreferrer">submit a response</a>
-</div>
+      <div class="eyebrow">music / art / photography / archive</div>
 
-  <p class="intro">
-    A curated late-night archive of acoustic, folk, shoegaze, experimental and electronic music — songs with emotional weight, quiet intensity and a life after dark.
-  </p>
+      <h1>somewhere<br />after<br />midnight</h1>
 
-  <p class="description">
-    Each month, a new playlist gathers tracks that feel intimate, weathered, strange or beautiful. Visual posts are built around empty frames, handmade textures and artwork submitted by listeners and artists.
-  </p>
+      <div class="nav">
+        <a href="archive/">archive</a>
+        <span>·</span>
+        <a href="https://www.instagram.com/aftermidnight.archive"
+           target="_blank"
+           rel="noopener noreferrer">instagram</a>
+        <span>·</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScp1iqGb6Q67rZItI5lgPVKomq35A_J7nNQKUDaHJps1_-Ydw/viewform?usp=publish-editor"
+           target="_blank"
+           rel="noopener noreferrer">share your response</a>
+      </div>
 
-<div class="listen-eyebrow">current listening</div>
+      <p class="intro">
+        A young, growing archive of music, images and creative responses gathered after dark.
+      </p>
 
-  <div class="links">
-  <a class="button"
-     href="https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq?si=fatMV1UbR8G2mc1WmxhvGA&pi=NFl-7i9NSRGnd"
-     target="_blank"
-     rel="noopener noreferrer">
-     Genesis [05_26]
-  </a>
+      <p class="description">
+        Each month, Somewhere After Midnight collects songs that feel intimate, strange, beautiful or emotionally resonant — drawing from folk, ambient, experimental, electronic, shoegaze and acoustic traditions.
+      </p>
 
-  <a class="button"
-   href="https://bandcamp.com/somewhereaftermidnight/playlist/genesis-0526?from=collection&ui_context=playlists"
-   target="_blank"
-   rel="noopener noreferrer">
-   Bandcamp Selection [05_26]
-</a>
+      <p class="description">
+        Alongside the music, we share photography, handmade textures, graphic fragments and visual experiments inspired by the tracks we discover.
+      </p>
 
-</div>
+      <div class="listen-eyebrow">current listening</div>
 
-  <div class="submit">
-    <p><strong>The archive remains open.</strong></p>
-    <p>
-  Submit visual responses to music — photography, drawing, collage, texture, film stills, handwritten fragments or artwork created in conversation with a song. Responses may connect to existing archive tracks or introduce something new alongside the work.
-</p>
+      <div class="links">
+        <a class="button"
+           href="https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq?si=fatMV1UbR8G2mc1WmxhvGA&pi=NFl-7i9NSRGnd"
+           target="_blank"
+           rel="noopener noreferrer">
+          Genesis [05_26]
+        </a>
 
-<p>
-  AI-generated images may occasionally appear as placeholders or prompts, but featured submissions should be human-made, clearly credited and emotionally genuine.
-</p>
-  </div>
+        <a class="button"
+           href="https://bandcamp.com/somewhereaftermidnight/playlist/genesis-0526?from=collection&ui_context=playlists"
+           target="_blank"
+           rel="noopener noreferrer">
+          Bandcamp Selection [05_26]
+        </a>
+      </div>
 
-  <div class="small">For the songs that find you when the room goes quiet.</div>  
+      <div class="submit">
+        <p><strong>The archive remains open.</strong></p>
 
-<p class="rights">
-  Artists retain full ownership of submitted work. Contributions remain credited to their creators and may be removed upon request.
-</p>
+        <p>
+          We are looking for visual responses to music — photography, drawing, painting, collage, film stills, poetry, handwritten fragments, animation or other creative work made in conversation with a song, album or sound.
+        </p>
 
-<p class="contact">contact: archive@somewhereaftermidnight.co.uk</p>
+        <p>
+          Responses may connect to music already featured in the archive, or introduce something new alongside the work.
+        </p>
 
-</section>
+        <p>
+          AI-generated images may occasionally appear as placeholders or prompts, but featured submissions should be human-made, clearly credited and emotionally genuine.
+        </p>
 
+        <p class="future">
+          As the archive grows, it may expand into deeper collaborations, printed work, sleepless machines, recordings and small live gatherings. For now, we are listening, collecting and building.
+        </p>
+      </div>
+
+      <div class="small">For the songs that find you when the room goes quiet.</div>
+
+      <p class="rights">
+        Artists retain full ownership of submitted work. Contributions remain credited to their creators and may be removed upon request.
+      </p>
+
+      <p class="contact">contact: archive@somewhereaftermidnight.co.uk</p>
+
+    </section>
   </main>
 </body>
 </html>
+```
