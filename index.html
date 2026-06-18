@@ -27,16 +27,16 @@
     }
 
     body {
-      margin: 0;
-      font-family: "EB Garamond", serif;
-      background-color: var(--paper);
-      background-image: url("images/paper-grain.jpg");
-      background-size: 700px;
-      background-repeat: repeat;
-      color: var(--ink);
-      line-height: 1.6;
-    }
-
+  margin: 0;
+  font-family: "EB Garamond", serif;
+  font-size: 1.25rem;
+  background-color: var(--paper);
+  background-image: url("images/paper-grain.jpg");
+  background-size: 700px;
+  background-repeat: repeat;
+  color: var(--ink);
+  line-height: 1.65;
+}
     .page {
       min-height: 100vh;
       display: flex;
@@ -139,16 +139,18 @@
 }
 
     .intro {
-      max-width: 620px;
-      font-size: clamp(1.1rem, 2.4vw, 1.35rem);
-      margin-bottom: 28px;
-    }
-
+  max-width: 620px;
+  font-size: clamp(1.45rem, 2.8vw, 1.75rem);
+  line-height: 1.45;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
     .description {
-      max-width: 640px;
-      margin-bottom: 34px;
-      font-size: 1rem;
-    }
+  max-width: 640px;
+  margin-bottom: 34px;
+  font-size: 1.25rem;
+  line-height: 1.65;
+}
 
     .listen-eyebrow {
       letter-spacing: 0.18em;
@@ -181,20 +183,21 @@
     }
 
     .submit {
-      border-top: 1px solid rgba(23,21,19,0.35);
-      padding-top: 24px;
-      font-size: 0.95rem;
-    }
+  border-top: 1px solid rgba(23,21,19,0.35);
+  padding-top: 24px;
+  font-size: 1.18rem;
+  line-height: 1.65;
+}
 
     .submit strong {
       font-weight: 700;
     }
 
     .future {
-      margin-top: 22px;
-      font-size: 0.92rem;
-      opacity: 0.82;
-    }
+  margin-top: 22px;
+  font-size: 1.05rem;
+  opacity: 0.82;
+}
 
     .small {
       margin-top: 28px;
@@ -203,18 +206,18 @@
     }
 
     .rights {
-      margin-top: 22px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(23,21,19,0.12);
-      font-size: 0.78rem;
-      opacity: 0.58;
-      line-height: 1.5;
-    }
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(23,21,19,0.12);
+  font-size: 0.95rem;
+  opacity: 0.58;
+  line-height: 1.5;
+}
 
-    .contact {
-      font-size: 0.85rem;
-      opacity: 0.72;
-    }
+.contact {
+  font-size: 0.95rem;
+  opacity: 0.72;
+}
 
     @media (max-width: 820px) {
       .page {
@@ -254,18 +257,15 @@
       }
 
       .intro {
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
 
-      .description,
-      .submit {
-        font-size: 0.98rem;
-      }
-
-      .links {
-        flex-direction: column;
-      }
+.description,
+.submit {
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
 
       a.button {
         width: 100%;
