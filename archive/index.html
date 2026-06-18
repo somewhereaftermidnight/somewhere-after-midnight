@@ -23,11 +23,12 @@
     }
 
     body {
-      margin: 0;
-      font-family: "EB Garamond", serif;
-      color: var(--ink);
-      line-height: 1.6;
-    }
+  margin: 0;
+  font-family: "EB Garamond", serif;
+  font-size: 1.25rem;
+  color: var(--ink);
+  line-height: 1.65;
+}
 
     .page {
       min-height: 100vh;
@@ -76,10 +77,11 @@
     }
 
     .intro {
-      max-width: 620px;
-      margin-bottom: 40px;
-      font-size: 1.1rem;
-    }
+  max-width: 620px;
+  margin-bottom: 40px;
+  font-size: 1.35rem;
+  line-height: 1.6;
+}
 
     .archive-list {
       display: flex;
@@ -100,9 +102,10 @@
     }
 
     .archive-title {
-      font-size: 1.4rem;
-      margin-bottom: 4px;
-    }
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
 
     .archive-meta {
       font-family: "Inter", sans-serif;
@@ -124,10 +127,27 @@
     }
 
     @media (max-width: 600px) {
-      .card {
-        padding: 30px 22px;
-      }
-    }
+  .page {
+    padding: 18px 10px;
+  }
+
+  .card {
+    padding: 30px 22px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 16vw, 4.4rem);
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .archive-title {
+    font-size: 1.45rem;
+  }
+}
   </style>
 </head>
 
