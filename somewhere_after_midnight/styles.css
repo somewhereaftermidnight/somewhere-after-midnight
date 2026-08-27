@@ -1,0 +1,416 @@
+:root {
+    --ink: #0B0B0C;
+    --paper: #D8C4A7;
+    --copper: #B57A59;
+    --charcoal: #131315;
+
+    --display: "Bebas Neue", sans-serif;
+    --editorial: "Cormorant Garamond", serif;
+    --ui: Arial, Helvetica, sans-serif;
+
+    --page-width: 1400px;
+    --side-padding: clamp(1.25rem, 4vw, 4rem);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--editorial);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--copper);
+    outline-offset: 5px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem var(--side-padding) 0;
+    overflow: hidden;
+}
+
+.hero__inner {
+    width: 100%;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero__title {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(5.4rem, 22vw, 18rem);
+    line-height: 0.72;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.hero__title span {
+    display: block;
+}
+
+.hero__lower {
+    margin-top: clamp(3rem, 8vw, 7rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero__intro {
+    margin: 0;
+    max-width: 28rem;
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    line-height: 1.2;
+    font-style: italic;
+}
+
+.hero__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    font-family: var(--ui);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero__links a {
+    position: relative;
+    padding-bottom: 0.35rem;
+}
+
+.hero__links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--copper);
+    transform: scaleX(0.25);
+    transform-origin: left;
+    transition: transform 180ms ease;
+}
+
+.hero__links a:hover::after,
+.hero__links a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   CURRENT EDITION
+========================================================= */
+
+.edition {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: clamp(5rem, 10vw, 10rem) var(--side-padding);
+}
+
+.edition__label {
+    margin-bottom: 2rem;
+    font-family: var(--ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--copper);
+}
+
+.edition__layout {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.edition__artwork {
+    overflow: hidden;
+    background: var(--charcoal);
+}
+
+.edition__artwork img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.edition__content {
+    align-self: end;
+}
+
+.edition__number {
+    margin: 0 0 0.5rem;
+    font-family: var(--ui);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--copper);
+}
+
+.edition__title {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(5rem, 18vw, 11rem);
+    line-height: 0.85;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.edition__description {
+    max-width: 33rem;
+    margin: 2rem 0 0;
+    font-size: clamp(1.35rem, 2.7vw, 2.1rem);
+    line-height: 1.2;
+    font-style: italic;
+}
+
+.edition__artists {
+    max-width: 38rem;
+    margin: 2rem 0;
+    font-family: var(--ui);
+    font-size: 0.72rem;
+    line-height: 1.8;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.72;
+}
+
+
+/* =========================================================
+   TEXT LINKS
+========================================================= */
+
+.text-link {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.35rem;
+    font-family: var(--ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.text-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--copper);
+    transform-origin: left;
+    transition: transform 180ms ease;
+}
+
+.text-link:hover::after,
+.text-link:focus-visible::after {
+    transform: scaleX(0.4);
+}
+
+
+/* =========================================================
+   MEMBERSHIP
+========================================================= */
+
+.membership {
+    border-top: 1px solid rgba(216, 196, 167, 0.16);
+    border-bottom: 1px solid rgba(216, 196, 167, 0.16);
+}
+
+.membership__inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: clamp(5rem, 10vw, 9rem) var(--side-padding);
+}
+
+.membership__eyebrow {
+    margin: 0 0 1.5rem;
+    font-family: var(--ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--copper);
+}
+
+.membership__title {
+    margin: 0;
+    max-width: 12ch;
+    font-family: var(--display);
+    font-size: clamp(3.5rem, 10vw, 7.5rem);
+    line-height: 0.9;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.membership__copy {
+    max-width: 38rem;
+    margin: 2rem 0 0;
+    font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+    line-height: 1.3;
+}
+
+.membership__link {
+    margin-top: 2.5rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 2rem var(--side-padding) 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    font-family: var(--ui);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 800px) {
+
+    .hero {
+        padding-top: 3rem;
+    }
+
+    .hero__lower {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .hero__links {
+        padding-bottom: 0.25rem;
+    }
+
+    .edition__layout {
+        grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.7fr);
+        gap: clamp(3rem, 6vw, 7rem);
+        align-items: end;
+    }
+
+    .edition__artwork {
+        width: 100%;
+    }
+
+    .edition__content {
+        padding-bottom: 2rem;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .hero__title {
+        max-width: 9ch;
+    }
+
+    .edition {
+        padding-top: 9rem;
+        padding-bottom: 11rem;
+    }
+
+    .edition__artwork {
+        transform: translateX(-2vw);
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding-top: 1.25rem;
+    }
+
+    .hero__title {
+        font-size: clamp(4.9rem, 24vw, 7rem);
+    }
+
+    .edition {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .edition__title {
+        font-size: clamp(5rem, 25vw, 8rem);
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
