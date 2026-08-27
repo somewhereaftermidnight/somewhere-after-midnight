@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        http-equiv="refresh"
-        content="0; url=https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Opening Geist — Somewhere After Midnight</title>
+
+    <meta name="robots" content="noindex">
 
     <link
         rel="canonical"
@@ -17,11 +15,30 @@
 </head>
 
 <body>
+
     <p>
         Opening Geist on Spotify…
+    </p>
+
+    <p>
         <a href="https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq">
             Continue to Spotify
         </a>
     </p>
+
+    <script>
+        const appUrl =
+            "spotify:playlist:2b0OfR3LPBjZNXqh3cYZJq";
+
+        const webUrl =
+            "https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq";
+
+        window.location.href = appUrl;
+
+        setTimeout(() => {
+            window.location.href = webUrl;
+        }, 1500);
+    </script>
+
 </body>
 </html>
