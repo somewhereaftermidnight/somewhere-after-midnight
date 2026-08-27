@@ -58,12 +58,11 @@ a:focus-visible {
 ========================================================= */
 
 .hero {
-    min-height: 100svh;
+    min-height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem var(--side-padding) 0;
+    padding: 2rem var(--side-padding) clamp(5rem, 8vw, 7rem);
     overflow: hidden;
 }
 
@@ -145,7 +144,10 @@ a:focus-visible {
 .edition {
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: clamp(5rem, 10vw, 10rem) var(--side-padding);
+    padding:
+        clamp(3rem, 6vw, 6rem)
+        var(--side-padding)
+        clamp(5rem, 10vw, 10rem);
 }
 
 .edition__label {
@@ -379,7 +381,8 @@ a:focus-visible {
     }
 
     .hero__title {
-        font-size: clamp(4.9rem, 24vw, 7rem);
+        font-size: clamp(4.4rem, 21.5vw, 6.4rem);
+        letter-spacing: -0.01em;
     }
 
     .edition {
@@ -396,7 +399,6 @@ a:focus-visible {
         gap: 0.4rem;
     }
 }
-
 
 /* =========================================================
    REDUCED MOTION
