@@ -1,44 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Opening Geist — Somewhere After Midnight</title>
+    <title>Geist — Somewhere After Midnight</title>
+
+    <meta
+        name="description"
+        content="Listen to Somewhere After Midnight Vol. 01 — Geist."
+    >
 
     <meta name="robots" content="noindex">
 
+    <link rel="icon" type="image/png" href="../../assets/brand/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        rel="canonical"
-        href="https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet"
     >
+
+    <!-- Main site stylesheet -->
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body>
 
-    <p>
-        Opening Geist on Spotify…
-    </p>
+<body class="listen-page">
 
-    <p>
-        <a href="https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq">
-            Continue to Spotify
-        </a>
-    </p>
+    <main class="listen-gateway">
+
+        <div class="listen-gateway__artwork">
+
+            <img
+                src="../../assets/editions/01/artwork.png"
+                alt="Artwork for Somewhere After Midnight Vol. 01 — Geist"
+            >
+
+        </div>
+
+
+        <div class="listen-gateway__content">
+
+            <p class="listen-gateway__eyebrow">
+                Somewhere After Midnight
+            </p>
+
+            <p class="listen-gateway__volume">
+                Vol. 01
+            </p>
+
+            <h1 class="listen-gateway__title">
+                Geist
+            </h1>
+
+            <p class="listen-gateway__description">
+                Something moves in the neardark.<br>
+                You can't see it, but it knows you're there.
+            </p>
+
+            <p class="listen-gateway__prompt">
+                Choose where to listen.
+            </p>
+
+
+            <div class="listen-gateway__links">
+
+                <a
+                    class="listen-choice"
+                    href="https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq"
+                >
+                    Spotify →
+                </a>
+
+                <a
+                    class="listen-choice"
+                    href="https://bandcamp.com/somewhereaftermidnight/playlist/geist"
+                >
+                    Bandcamp →
+                </a>
+
+            </div>
+
+
+            <p class="listen-gateway__redirect">
+                Opening Spotify automatically in
+                <span id="countdown">6</span> seconds.
+            </p>
+
+            <a class="listen-gateway__home" href="../../">
+                Somewhere After Midnight →
+            </a>
+
+        </div>
+
+    </main>
+
 
     <script>
-        const appUrl =
+        const spotifyApp =
             "spotify:playlist:2b0OfR3LPBjZNXqh3cYZJq";
 
-        const webUrl =
+        const spotifyWeb =
             "https://open.spotify.com/playlist/2b0OfR3LPBjZNXqh3cYZJq";
 
-        window.location.href = appUrl;
+        let remaining = 6;
 
-        setTimeout(() => {
-            window.location.href = webUrl;
-        }, 1500);
+        const countdown =
+            document.getElementById("countdown");
+
+        const timer = setInterval(() => {
+
+            remaining -= 1;
+            countdown.textContent = remaining;
+
+            if (remaining <= 0) {
+
+                clearInterval(timer);
+
+                /*
+                    Try the Spotify app first.
+                */
+                window.location.href = spotifyApp;
+
+                /*
+                    Fall back to Spotify web shortly afterwards
+                    if the app does not open.
+                */
+                setTimeout(() => {
+                    window.location.href = spotifyWeb;
+                }, 1500);
+            }
+
+        }, 1000);
     </script>
 
 </body>
+
 </html>
