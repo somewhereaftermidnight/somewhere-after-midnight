@@ -282,6 +282,17 @@ a:focus-visible {
     text-transform: uppercase;
 }
 
+.membership__cover {
+    margin-top: 2.5rem;
+    width: min(100%, 360px);
+}
+
+.membership__cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .membership__copy {
     max-width: 38rem;
     margin: 2rem 0 0;
@@ -393,6 +404,14 @@ a:focus-visible {
     .edition__title {
         font-size: clamp(5rem, 25vw, 8rem);
     }
+
+    @media (max-width: 480px) {
+
+    .membership__cover {
+        width: 100%;
+    }
+
+}
 
     .footer {
         flex-direction: column;
